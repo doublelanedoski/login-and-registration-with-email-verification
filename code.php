@@ -23,7 +23,7 @@ function sendemail_verify($name, $email, $verify_token) {
 
                 //Recipients
 
-                $mail->setFrom('ultracoin0@gmail.com', $name);
+                $mail->setFrom('your email', $name);
                 $mail->addAddress($email, '');     //Add a recipient
              
                 $email_template = "<html>
@@ -35,7 +35,7 @@ function sendemail_verify($name, $email, $verify_token) {
                 </head>
                 <body>
                     
-                    <h2>You have Registered with Funda of Web IT</h2>
+                    <h2>You have Registered with DoublesTech</h2>
                     <h5>Verify your email address to login with the below given link</h5>
                     <br/><br/>
                     <a href='http://localhost:8012/register-login-with-verification/verify-email.php?token=$verify_token'>Click Me</a>
@@ -43,7 +43,7 @@ function sendemail_verify($name, $email, $verify_token) {
                 </html>
                 ";
 
-            $subject = "Email Verification from Funda of Web IT";
+            $subject = "Email Verification from DoublesTech";
             $mail->isHTML(true);     
             $body = $email_template;                             //Set email format to HTML
             $mail->Subject =$subject;

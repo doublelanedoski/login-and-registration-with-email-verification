@@ -18,14 +18,14 @@ function send_password_reset($get_name, $get_email, $token)
                 $mail->isSMTP();                                            //Send using SMTP
                 $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
                 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                $mail->Username   = 'ultracoin0@gmail.com';                     //SMTP username
-                $mail->Password   = 'anomfotodmnjnbnv';                               //SMTP password
+                $mail->Username   = 'your email';                     //SMTP username
+                $mail->Password   = 'your password';                               //SMTP password
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                 $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                 //Recipients
 
-                $mail->setFrom('ultracoin0@gmail.com', $get_name);
+                $mail->setFrom('your email', $get_name);
                 $mail->addAddress($get_email);     //Add a recipient
              
                 $email_template = "<html>
